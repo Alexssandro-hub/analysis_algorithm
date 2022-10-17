@@ -62,22 +62,26 @@ void printArray(float arr[], int n)
     cout << endl;
 }
 
+// Driver Code
 int main()
 {
     srand(time(NULL));
 
     int tamanho[20];
 
-    int qtdVetores = rand()%(20-10+1)+10; 
+    int qtdVetores = rand()%(20-10+1)+10; //qtd de vetores gerados: m[]
     cout << " Quantidade de Vetores Gerados: " << qtdVetores << "\n";
 
 
     for(int i = 1; i <= qtdVetores; i++)
         tamanho[i] = 10 + (rand() % 10000);
 
+//    time_t startInsertion, endInsertion;
+//    time(&startInsertion);
+//    ios_base::sync_with_stdio(false);
 
     for(int i = 1; i <= qtdVetores; i++){
-        cout << "\n";
+        cout << "Contagem Insercao Default " << "\n";
         cout << " TAMANHO: " << tamanho[i] << "\n";
         cout << " Iteracao: " << i << "\n";
 
@@ -88,14 +92,48 @@ int main()
         }
 
         int n = sizeof(m) / sizeof(m[0]);
-        //insertionSort(m, n);
+
+        insertionSort(m, n);
+        printArray(m, n);
+
+        cout << "\n";
+    }
+//    time(&endInsertion);
+//    double time_taken = double(endInsertion - startInsertion);
+//    cout << "O tempo gasto pelo programa é : " << fixed
+//         << time_taken << setprecision(5);
+//    cout << " segundos " << "\n";
+
+
+//    time_t startInsertionBinary, endInsertionBinary;
+//    time(&startInsertionBinary);
+//    ios_base::sync_with_stdio(false);
+
+    for(int i = 1; i <= qtdVetores; i++){
+
+        cout << "Contagem Insercao Binaria " << "\n";
+        cout << " TAMANHO: " << tamanho[i] << "\n";
+        cout << " Iteracao: " << i << "\n";
+
+        float m[tamanho[i]];
+
+        for(int j = 0; j < tamanho[i]; j++){
+            m[j] = (float) (rand() % ( (2*tamanho[i] - (-2*tamanho[i]) + 1 ) )+(-2*tamanho[i]));
+        }
+
+        int n = sizeof(m) / sizeof(m[0]);
+
         insertionSortWithBinary(m, n);
         printArray(m, n);
 
         cout << "\n";
-        cout << "\n";
-        cout << "\n";
     }
+
+//    time(&endInsertionBinary);
+//    double time_taken_binary = double(endInsertionBinary - startInsertionBinary);
+//    cout << "O tempo gasto pelo programa é : " << fixed
+//         << time_taken_binary << setprecision(5);
+//    cout << " segundos " << "\n";
 
     return 0;
 }
