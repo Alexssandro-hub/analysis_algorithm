@@ -88,7 +88,7 @@ int main()
         }
 
         int n = sizeof(m) / sizeof(m[0]);
-        insertionSort(m, n);
+        //insertionSort(m, n);
         insertionSortWithBinary(m, n);
         printArray(m, n);
 
