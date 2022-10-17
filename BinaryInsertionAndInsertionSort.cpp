@@ -62,7 +62,6 @@ void printArray(float arr[], int n)
     cout << endl;
 }
 
-// Driver Code
 int main()
 {
     //Part: Binary Insertion
@@ -70,7 +69,7 @@ int main()
 
     int tamanho[20];
 
-    int qtdVetores = rand()%(20-10+1)+10; //qtd de vetores gerados: m[]
+    int qtdVetores = rand()%(20-10+1)+10; //qtd de vetores m[] a gerar.
     cout << " Quantidade de Vetores Gerados: " << qtdVetores << "\n";
 
 
@@ -91,7 +90,7 @@ int main()
 
         int n = sizeof(m) / sizeof(m[0]);
         insertionSort(m, n);
-        //insertionSortWithBinary(m, n);
+        insertionSortWithBinary(m, n);
         printArray(m, n);
 
         cout << "\n";
