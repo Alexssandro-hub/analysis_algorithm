@@ -64,12 +64,11 @@ void printArray(float arr[], int n)
 
 int main()
 {
-    //Part: Binary Insertion
     srand(time(NULL));
 
     int tamanho[20];
 
-    int qtdVetores = rand()%(20-10+1)+10; //qtd de vetores m[] a gerar.
+    int qtdVetores = rand()%(20-10+1)+10; 
     cout << " Quantidade de Vetores Gerados: " << qtdVetores << "\n";
 
 
