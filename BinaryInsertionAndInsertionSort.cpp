@@ -66,24 +66,25 @@ int main()
 {
     srand(time(NULL));
 
-    //int tamanho[20];
+    int n[10];
+    int m = rand()%(20-10+1)+10; //15
 
-    int m = rand()%(20-10+1)+10;
-//    for(int i = 1; i <= qtdVetores; i++)
-//        tamanho[i] = 10 + (rand() % 10000);
+    //arrayTam
+    for(int i = 0; i < 10; i++)
+        n[i] = 10 + (rand() % 10000);
 
     clock_t startInsertion, endInsertion;
 
-    for(int i = 1; i <= 10; i++){
+    for(int i = 0; i < 10; i++){
         startInsertion = clock();
         cout << "Contagem Insercao Default " << "\n";
         cout << " TAMANHO: " << m << "\n";
         cout << " Iteracao: " << i << "\n";
 
-        float arr[m];
+        float arr[n[i]];
 
         for(int j = 0; j < m; j++)
-            arr[j] = (float) (rand() % ( (2*m - (-2*m) + 1 ) )+(-2*m));
+            arr[j] = (float) (rand() % ( (2 * n[i] - (-2*n[i]) + 1 ) )+(-2*n[i]));
 
         int n = sizeof(arr) / sizeof(arr[0]);
 
@@ -102,16 +103,16 @@ int main()
 
     clock_t startInsertionBinary, endInsertionBinary;
 
-    for(int i = 1; i <= 10; i++){
+    for(int i = 0; i < 10; i++){
         startInsertionBinary = clock();
         cout << "Contagem Insercao Binaria " << "\n";
         cout << " TAMANHO: " << m << "\n";
         cout << " Iteracao: " << i << "\n";
 
-        float arr[m];
+        float arr[n[i]];
 
         for(int j = 0; j < m; j++)
-            arr[j] = (float) (rand() % ( (2*m - (-2*m) + 1 ) )+(-2*m));
+            arr[j] = (float) (rand() % ( (2*n[i] - (-2*n[i]) + 1 ) )+(-2*n[i]));
 
         int n = sizeof(arr) / sizeof(arr[0]);
 
