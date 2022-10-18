@@ -66,32 +66,28 @@ int main()
 {
     srand(time(NULL));
 
-    int tamanho[20];
+    //int tamanho[20];
 
-    int qtdVetores = rand()%(20-10+1)+10; //qtd de vetores gerados: m[]
-    cout << " Quantidade de Vetores Gerados: " << qtdVetores << "\n";
-
-
-    for(int i = 1; i <= qtdVetores; i++)
-        tamanho[i] = 10 + (rand() % 10000);
+    int m = rand()%(20-10+1)+10;
+//    for(int i = 1; i <= qtdVetores; i++)
+//        tamanho[i] = 10 + (rand() % 10000);
 
     clock_t startInsertion, endInsertion;
 
-    for(int i = 1; i <= qtdVetores; i++){
+    for(int i = 1; i <= 10; i++){
         startInsertion = clock();
         cout << "Contagem Insercao Default " << "\n";
-        cout << " TAMANHO: " << tamanho[i] << "\n";
+        cout << " TAMANHO: " << m << "\n";
         cout << " Iteracao: " << i << "\n";
 
-        float m[tamanho[i]];
+        float arr[m];
 
-        for(int j = 0; j < tamanho[i]; j++){
-            m[j] = (float) (rand() % ( (2*tamanho[i] - (-2*tamanho[i]) + 1 ) )+(-2*tamanho[i]));
-        }
+        for(int j = 0; j < m; j++)
+            arr[j] = (float) (rand() % ( (2*m - (-2*m) + 1 ) )+(-2*m));
 
-        int n = sizeof(m) / sizeof(m[0]);
+        int n = sizeof(arr) / sizeof(arr[0]);
 
-        insertionSort(m, n);
+        insertionSort(arr, n);
         //printArray(m, n);
         endInsertion = clock();
 
@@ -106,21 +102,20 @@ int main()
 
     clock_t startInsertionBinary, endInsertionBinary;
 
-    for(int i = 1; i <= qtdVetores; i++){
+    for(int i = 1; i <= 10; i++){
         startInsertionBinary = clock();
         cout << "Contagem Insercao Binaria " << "\n";
-        cout << " TAMANHO: " << tamanho[i] << "\n";
+        cout << " TAMANHO: " << m << "\n";
         cout << " Iteracao: " << i << "\n";
 
-        float m[tamanho[i]];
+        float arr[m];
 
-        for(int j = 0; j < tamanho[i]; j++){
-            m[j] = (float) (rand() % ( (2*tamanho[i] - (-2*tamanho[i]) + 1 ) )+(-2*tamanho[i]));
-        }
+        for(int j = 0; j < m; j++)
+            arr[j] = (float) (rand() % ( (2*m - (-2*m) + 1 ) )+(-2*m));
 
-        int n = sizeof(m) / sizeof(m[0]);
+        int n = sizeof(arr) / sizeof(arr[0]);
 
-        insertionSortWithBinary(m, n);
+        insertionSortWithBinary(arr, n);
         //printArray(m, n);
         endInsertionBinary = clock();
 
