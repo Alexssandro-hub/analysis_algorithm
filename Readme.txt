@@ -1225,3 +1225,66 @@ Contagem Insercao Binaria
  Iteracao: 9
 Array[9] com o tempo:
 O tempo gasto pelo programa ├® : 0.03800 segundos
+
+
+#################################################################################
+
+Tamanho 20:
+
+
+Inserção Default: 0.055
+Inserção Binária: 0.253
+
+
+Tamanho: 16
+
+Inserção Default: 0.048
+Inserção Binária: 0.528
+
+
+Tamanho:18
+
+Inserção Default: 0.102
+Inserção Binária: 0.227
+
+
+Tamanho: 10
+
+Inserção Default: 0.061
+Inserção Binária: 0.64
+
+
+Tamanho 13
+
+Inserção Default: 0.12
+Inserção Binária: 0.106
+
+Tamanho 14
+
+Inserção Default: 0.09
+Inserção Binária: 0.221
+
+Tamanho 12
+
+Inserção Default: 0.048
+Inserção Binária: 0.241
+
+Tamanho 19
+
+Inserção Default: 0.123
+Inserção Binária: 0.21
+
+
+Tamanho 15
+
+Inserção Default: 0.088
+Inserção Binária: 0.126
+
+
+Tamanho 18
+
+Inserção Default: 0.09
+Inserção Binária: 0.203
+
+
+
